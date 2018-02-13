@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "548327281606",
+    "firebase_url": "https://toshi-release.firebaseio.com",
+    "project_id": "toshi-release",
+    "storage_bucket": "toshi-release.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548327281606:android:9c5d4aea033e4271",
+        "android_client_info": {
+          "package_name": "org.toshi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548327281606-ruq4c6efeha8s1nd64c4asq7ukqu08tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7Ebrr-9eDi7U_EgX5kdPZlJlkPNRoOw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

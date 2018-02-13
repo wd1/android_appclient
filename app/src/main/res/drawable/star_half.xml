@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 	Copyright (c) 2017. Toshi Inc
+  ~
+  ~ 	This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="31dp"
+    android:height="31dp"
+    android:viewportWidth="11"
+    android:viewportHeight="11">
+
+    <group
+        android:translateX="-43.000000"
+        android:translateY="-372.000000">
+        <group
+            android:translateX="43.000000"
+            android:translateY="372.000000">
+            <path
+                android:fillColor="@color/ratingPrimary"
+                android:strokeWidth="1"
+                android:pathData="M5.5,0 L4.17083333,4.125 L0,4.125 L3.40083333,6.545 L2.09916667,10.5416667
+L5.5,8.06666667 L5.5,1.11022302e-15 Z" />
+            <path
+                android:fillColor="@color/placeholder"
+                android:strokeWidth="1"
+                android:pathData="M5.5,0 L6.82916667,4.125 L11,4.125 L7.59916667,6.545 L8.90083333,10.5416667
+L5.5,8.06666667 L5.5,0 Z" />
+        </group>
+    </group>
+</vector>

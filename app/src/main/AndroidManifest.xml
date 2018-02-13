@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 	Copyright (c) 2017. Toshi Inc
+  ~
+  ~ 	This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.toshi">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:name="com.toshi.view.BaseApplication"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.toshi.view.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ethereum" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="app.toshi.org"/>
+                <data android:pathPattern="/add/@.*"/>
+                <data android:pathPattern="/pay/@.*"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.toshi.view.activity.MainActivity"
+                  android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity android:name="com.toshi.view.activity.ChatActivity"
+                  android:parentActivityName="com.toshi.view.activity.MainActivity"
+                  android:windowSoftInputMode="stateUnchanged">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.toshi.view.activity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.toshi.view.activity.ViewUserActivity"
+            android:theme="@style/AppTheme.profileTheme" />
+        <activity
+            android:name="com.toshi.view.activity.ViewDappActivity"
+            android:theme="@style/AppTheme.profileTheme" />
+        <activity android:name="com.toshi.view.activity.GroupInfoActivity" />
+        <activity android:name="com.toshi.view.activity.ViewProfileActivity" />
+        <activity android:name="com.toshi.view.activity.EditProfileActivity" />
+        <activity android:name="com.toshi.view.activity.ConversationSetupActivity" />
+        <activity android:name="com.toshi.view.activity.AmountActivity" />
+        <activity android:name="com.toshi.view.activity.ScannerActivity"
+                  android:theme="@style/FullScreenTheme"/>
+        <activity android:name="com.toshi.view.activity.LicenseListActivity" />
+        <activity android:name="com.toshi.view.activity.LicenseActivity" />
+        <activity android:name="com.toshi.view.activity.TrustedFriendsActivity" />
+        <activity android:name="com.toshi.view.activity.BackupPhraseInfoActivity" />
+        <activity android:name="com.toshi.view.activity.BackupPhraseActivity" />
+        <activity android:name="com.toshi.view.activity.BackupPhraseVerifyActivity" />
+        <activity android:name="com.toshi.view.activity.DepositActivity" />
+        <activity android:name="com.toshi.view.activity.FullscreenImageActivity"/>
+        <activity android:name="com.toshi.view.activity.AttachmentConfirmationActivity" />
+        <activity android:name="com.toshi.view.activity.SignInActivity" />
+        <activity android:name="com.toshi.view.activity.SignOutActivity"
+                  android:theme="@style/SplashTheme" />
+        <activity android:name="com.toshi.view.activity.QrCodeActivity"/>
+        <activity android:name="com.toshi.view.activity.QrCodeHandlerActivity" />
+        <activity android:name="com.toshi.view.activity.webView.JellyBeanWebViewActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.toshi.view.activity.ImageCropActivity"
+                  android:theme="@style/DarkTheme"/>
+        <activity android:name="com.toshi.view.activity.CurrencyActivity" />
+        <activity android:name="com.toshi.view.activity.LandingActivity"
+                  android:theme="@style/DarkTheme"/>
+        <activity android:name="com.toshi.view.activity.BrowseMoreActivity"/>
+        <activity android:name="com.toshi.view.activity.AdvancedSettingsActivity"/>
+        <activity android:name="com.toshi.view.activity.BalanceActivity"/>
+        <activity android:name="com.toshi.view.activity.SendActivity"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.toshi.view.activity.SignInInfoActivity"/>
+        <activity android:name="com.toshi.view.activity.ContactSearchActivity"/>
+        <activity android:name="com.toshi.view.activity.ConversationRequestActivity" />
+        <activity android:name=".view.activity.AddGroupParticipantsActivity" />
+        <activity android:name=".view.activity.EditGroupActivity" />
+        <activity android:name=".view.activity.webView.LollipopWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d6f421ea196993dc3048f7ba96ef27a75a55b2a2" />
+
+        <receiver
+            android:name="com.toshi.service.NotificationDismissedReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.toshi.service.GcmMessageReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.toshi.service.InstanceIdService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.toshi.service.RegistrationIntentService"
+            android:exported="false">
+        </service>
+
+        <service
+            android:name="com.toshi.presenter.chat.DirectReplyService"
+            android:exported="false"/>
+
+        <service android:name="com.toshi.service.RejectPaymentRequestService"
+            android:exported="false" />
+
+        <!-- Content provider for taking photos with the camera -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <meta-data
+            android:name="com.toshi.manager.network.image.GlideOkHttpStack"
+            android:value="GlideModule"/>
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+
+    </application>
+
+</manifest>
